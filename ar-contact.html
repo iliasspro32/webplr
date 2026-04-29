@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا - PLR Digital Bundle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;font-family:"Cairo",Arial,sans-serif;background:#050505;color:#f8fafc;line-height:1.8}
+    main{width:min(900px,calc(100% - 32px));margin:0 auto;padding:52px 0}
+    a{color:#fbbf24} h1,h2{line-height:1.25} h1{font-size:2.4rem}.box{border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(255,255,255,.045);padding:22px;margin:18px 0}.muted{color:#a1a1aa}
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="./ar.html">العودة إلى الصفحة الرئيسية</a></p>
+    <h1>اتصل بنا</h1>
+    <p class="muted">آخر تحديث: 30 أبريل 2026</p>
+    <div class="box">
+      <p>للوصول إلى المنتج أو الفواتير أو الاسترداد أو الدعم العام، تواصل معنا عبر البريد الإلكتروني.</p>
+      <p><strong>البريد:</strong> support@example.com</p>
+      <p><strong>اسم النشاط:</strong> PLR Digital Bundle</p>
+      <p><strong>وقت الرد:</strong> من يوم إلى يومي عمل</p>
+      <p class="muted">استبدل هذا البريد المؤقت ببريد الدعم الحقيقي قبل تشغيل الإعلانات.</p>
+    </div>
+  </main>
+  <script>
+    fetch("/api/config", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(c => {
+      if (c?.supportEmail) document.body.innerHTML = document.body.innerHTML.replaceAll("support@example.com", c.supportEmail);
+    }).catch(() => {});
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - PLR Digital Bundle</title>
+  <style>
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:#050505;color:#f8fafc;line-height:1.6}
+    main{width:min(900px,calc(100% - 32px));margin:0 auto;padding:52px 0}
+    a{color:#fbbf24} h1,h2{line-height:1.1} h1{font-size:2.4rem}.box{border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(255,255,255,.045);padding:22px;margin:18px 0}.muted{color:#a1a1aa}
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="./index.html">Back to home</a></p>
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: April 30, 2026</p>
+    <div class="box">
+      <p>PLR Digital Bundle respects your privacy. We collect only the information needed to process orders, provide access to digital products, respond to support requests, and improve our marketing.</p>
+      <p>Payments are processed by third-party providers such as Stripe and PayPal. We do not store full card numbers on this website.</p>
+      <p>We may use analytics, advertising pixels, and cookies, including Meta Pixel, to measure performance and improve ads. You can disable cookies in your browser settings.</p>
+      <p>For privacy questions, contact us at: <strong>support@example.com</strong></p>
+    </div>
+  </main>
+  <script>
+    fetch("/api/config", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(c => {
+      if (c?.supportEmail) document.body.innerHTML = document.body.innerHTML.replaceAll("support@example.com", c.supportEmail);
+    }).catch(() => {});
+  </script>
+</body>
+</html>
